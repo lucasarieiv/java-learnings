@@ -1,6 +1,7 @@
 package Conta;
 
 public class Conta {
+    Data dataDeAbertura;
     String titular;
     int numero;
     String agencia;
@@ -20,7 +21,12 @@ public class Conta {
     }
 
     String recuperarDadosParaImpressao() {
-        return "Titular: " + this.titular + "\nSaldo: " + this.saldo + "\nAgencia: " + this.agencia + "\nNumero: " +
-                this.numero + "\nData de Abertura: " + this.dataAbertura;
+        String dados = "\nTitular: " + this.titular;
+        dados += "\nSaldo: " + this.saldo;
+        dados += "\nAgencia: " + this.agencia;
+        dados += "\nNumero: " + this.numero;
+        dados += "\nSaldo: " + this.saldo;
+        dados += "\nData de Abertura: " + this.dataDeAbertura.formatada();
+        return dados;
     }
 }
